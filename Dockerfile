@@ -7,7 +7,6 @@ WORKDIR /backend
 COPY ./backend/requirements.txt /
 COPY ./docker_env/requirements-all.txt /
 RUN python3 -m pip install -i https://mirrors.aliyun.com/pypi/simple/ -r /requirements.txt
-RUN python3 -m pip install -i https://mirrors.aliyun.com/pypi/simple/ -r /requirements-all.txt
 
 FROM registry.cn-zhangjiakou.aliyuncs.com/dvadmin-pro/python38-base-backend:latest
 WORKDIR /backend
