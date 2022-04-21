@@ -1,118 +1,191 @@
-# wxcloudrun-django
-[![GitHub license](https://img.shields.io/github/license/WeixinCloud/wxcloudrun-express)](https://github.com/WeixinCloud/wxcloudrun-express)
-![GitHub package.json dependency version (prod)](https://img.shields.io/badge/python-3.7.3-green)
+# Django-Vue-Admin
 
-微信云托管 python Django 框架模版，实现简单的计数器读写接口，使用云托管 MySQL 读写、记录计数值。
+[![img](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitee.com/liqianglog/django-vue-admin/blob/master/LICENSE)  [![img](https://img.shields.io/badge/python-%3E=3.6.x-green.svg)](https://python.org/)  [![PyPI - Django Version badge](https://img.shields.io/badge/django%20versions-3.2-blue)](https://docs.djangoproject.com/zh-hans/3.2/) [![img](https://img.shields.io/badge/node-%3E%3D%2012.0.0-brightgreen)](https://nodejs.org/zh-cn/) [![img](https://gitee.com/liqianglog/django-vue-admin/badge/star.svg?theme=dark)](https://gitee.com/liqianglog/django-vue-admin)
 
-![](https://qcloudimg.tencent-cloud.cn/raw/be22992d297d1b9a1a5365e606276781.png)
+[预 览](https://demo.django-vue-admin.com) | [官网文档](https://www.django-vue-admin.com) | [群聊](https://qm.qq.com/cgi-bin/qm/qr?k=fOdnHhC8DJlRHGYSnyhoB8P5rgogA6Vs&jump_from=webapi) | [社区](https://bbs.django-vue-admin.com) | [插件市场](https://bbs.django-vue-admin.com/plugMarket.html) | [Github](https://github.com/liqianglog/django-vue-admin) 
 
 
-## 快速开始
-前往 [微信云托管快速开始页面](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/basic/guide.html)，选择相应语言的模板，根据引导完成部署。
 
-## 本地调试
-下载代码在本地调试，请参考[微信云托管本地调试指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)。
+💡 **「关于」**
 
-## 目录结构说明
+我们是一群热爱代码的青年，在这个炙热的时代下，我们希望静下心来通过Code带来一点我们的色彩和颜色。
+
+因为热爱，所以拥抱未来
+
+## 平台简介
+
+💡 [django-vue-admin](https://gitee.com/dvadmin/django-vue-admin) 是一套全部开源的快速开发平台，毫无保留给个人及企业免费使用。
+
+
+
+* 🧑‍🤝‍🧑前端采用[D2Admin](https://github.com/d2-projects/d2-admin) 、[Vue](https://cn.vuejs.org/)、[ElementUI](https://element.eleme.cn/)。
+* 👭后端采用 Python 语言 Django 框架以及强大的 [Django REST Framework](https://pypi.org/project/djangorestframework)。
+* 👫权限认证使用[Django REST Framework SimpleJWT](https://pypi.org/project/djangorestframework-simplejwt)，支持多终端认证系统。
+* 👬支持加载动态权限菜单，多方式轻松权限控制。
+* 💏特别鸣谢：[D2Admin](https://github.com/d2-projects/d2-admin) 、[Vue-Element-Admin](https://github.com/PanJiaChen/vue-element-admin)。
+* 💡 特别感谢[jetbrains](https://www.jetbrains.com/) 为本开源项目提供免费的 IntelliJ IDEA 授权。
+
+
+
+## 在线体验
+
+👩‍👧‍👦演示地址：[http://demo.django-vue-admin.com](http://demo.django-vue-admin.com) 
+
+​			账号：superadmin 
+
+​			密码：superadmin123456
+
+👩‍👦‍👦文档地址：[https://django-vue-admin.com](https://django-vue-admin.com)
+
+
+
+## 交流
+
+- 交流社区：[戳我](https://bbs.django-vue-admin.com)👩‍👦‍👦
+
+- 插件市场：[戳我](https://bbs.django-vue-admin.com/plugMarket.html)👩‍👦‍👦
+
+-  django-vue-admin交流01群：812482043 [点击链接加入群聊](https://qm.qq.com/cgi-bin/qm/qr?k=aJVwjDvH-Es4MPJQuoO32N0SucK22TE5&jump_from=webapi)
+-  django-vue-admin交流02群：687252418  [点击链接加入群聊](https://qm.qq.com/cgi-bin/qm/qr?k=4jJN4IjWGfxJ8YJXbb_gTsuWjR34WLdc&jump_from=webapi)
+
+- 二维码
+
+  <img src='https://gitee.com/liqianglog/django-vue-admin/raw/master/dvadmin-ui/src/assets/images/qq.jpg' width='200'>
+
+## 源码地址
+
+gitee地址(主推)：[https://gitee.com/liqianglog/django-vue-admin](https://gitee.com/liqianglog/django-vue-admin)👩‍👦‍👦
+
+github地址：[https://github.com/liqianglog/django-vue-admin](https://github.com/liqianglog/django-vue-admin)👩‍👦‍👦
+
+
+
+## 内置功能
+
+1.  👨‍⚕️菜单管理：配置系统菜单，操作权限，按钮权限标识、后端接口权限等。
+2.  🧑‍⚕️部门管理：配置系统组织机构（公司、部门、角色）。
+3.  👩‍⚕️角色管理：角色菜单权限分配、数据权限分配、设置角色按部门进行数据范围权限划分。
+4.  🧑‍🎓权限权限：授权角色的权限范围。
+5.  👨‍🎓用户管理：用户是系统操作者，该功能主要完成系统用户配置。
+6.  👬接口白名单：配置不需要进行权限校验的接口。
+7.  🧑‍🔧字典管理：对系统中经常使用的一些较为固定的数据进行维护。
+8.  🧑‍🔧地区管理：对省市县区域进行管理。
+9.  📁附件管理：对平台上所有文件、图片等进行统一管理。
+10.  🗓️操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
+11.  🔌[插件市场 ](https://bbs.django-vue-admin.com/plugMarket.html)：基于Django-Vue-Admin框架开发的应用和插件。
+
+##  插件市场 🔌
+
+- Celery异步任务：[dvadmin-celery](https://gitee.com/huge-dream/dvadmin-celery)
+- 升级中心后端：[dvadmin-upgrade-center](https://gitee.com/huge-dream/dvadmin-upgrade-center)
+- 升级中心前端：[dvadmin-upgrade-center-web](https://gitee.com/huge-dream/dvadmin-upgrade-center-web)
+
+## 准备工作
 ~~~
-.
-├── Dockerfile                  dockerfile
-├── README.md                   README.md文件
-├── container.config.json       模板部署「服务设置」初始化配置（二开请忽略）
-├── manage.py                   django项目管理文件 与项目进行交互的命令行工具集的入口
-├── requirements.txt            依赖包文件
-└── wxcloudrun                  app目录
-    ├── __init__.py             python项目必带  模块化思想
-    ├── apps.py                 自动生成文件apps.py
-    ├── asgi.py                 自动生成文件asgi.py, 异步服务网关接口
-    ├── migrations              数据移植（迁移）模块
-    ├── models.py               数据模块
-    ├── settings.py             项目的总配置文件  里面包含数据库 web应用 日志等各种配置
-    ├── templates               模版目录,包含主页index.html文件
-    ├── urls.py                 URL配置文件  Django项目中所有地址中（页面）都需要我们自己去配置其URL
-    ├── views.py                执行响应的代码所在模块  代码逻辑处理主要地点  项目大部分代码在此编写
-    └── wsgi.py                 自动生成文件wsgi.py, Web服务网关接口
+Python >= 3.6.0 (推荐3.8+版本)
+nodejs >= 14.0 (推荐最新)
+Mysql >= 5.7.0 (可选，默认数据库sqlite3，推荐8.0版本)
+Redis(可选，最新版)
+~~~
+
+## 前端♝
+
+```bash
+# 克隆项目
+git clone https://gitee.com/liqianglog/django-vue-admin.git
+
+# 进入项目目录
+cd web
+
+# 安装依赖
+npm install --registry=https://registry.npm.taobao.org
+
+# 启动服务
+npm run dev
+# 浏览器访问 http://localhost:8080
+# .env.development 文件中可配置启动端口等参数
+# 构建生产环境
+# npm run build
+```
+
+
+
+## 后端💈
+
+~~~bash
+1. 进入项目目录 cd backend
+2. 在项目根目录中，复制 ./conf/env.example.py 文件为一份新的到 ./conf 文件夹下，并重命名为 env.py
+3. 在 env.py 中配置数据库信息
+	mysql数据库版本建议：8.0
+	mysql数据库字符集：utf8mb4
+4. 安装依赖环境
+	pip3 install -r requirements.txt
+5. 执行迁移命令：
+	python3 manage.py makemigrations
+	python3 manage.py migrate
+6. 初始化数据
+	python3 manage.py init
+7. 初始化省市县数据:
+	python3 manage.py init_area
+8. 启动项目
+	python3 manage.py runserver 0.0.0.0:8000
+或使用 daphne :
+  daphne -b 0.0.0.0 -8000 application.asgi:application
+~~~
+
+### 访问项目
+
+- 访问地址：[http://localhost:8080](http://localhost:8080) (默认为此地址，如有修改请按照配置文件)
+- 账号：`superadmin` 密码：`admin123456`
+
+
+
+
+
+### docker-compose 运行
+
+~~~shell
+# 先安装docker-compose (自行百度安装),执行此命令等待安装，如有使用celery插件请打开docker-compose.yml中celery 部分注释
+docker-compose up -d
+# 初始化后端数据(第一次执行即可)
+docker exec -ti DVAdmin-django bash
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py init -y
+exit
+
+前端地址：http://127.0.0.1:8080
+后端地址：http://127.0.0.1:8000
+# 在服务器上请把127.0.0.1 换成自己公网ip
+账号：superadmin 密码：admin123456
+
+# docker-compose 停止
+docker-compose down
+#  docker-compose 重启
+docker-compose restart
+#  docker-compose 启动时重新进行 build
+docker-compose up -d --build
 ~~~
 
 
-## 服务 API 文档
 
-### `GET /api/count`
+## 演示图✅
 
-获取当前计数
+![image-01](https://gitee.com/liqianglog/pic/raw/master/master/01.png)
 
-#### 请求参数
+![image-02](https://gitee.com/liqianglog/pic/raw/master/master/02.png)
 
-无
+![image-03](https://gitee.com/liqianglog/pic/raw/master/master/03.png)
 
-#### 响应结果
+![image-04](https://gitee.com/liqianglog/pic/raw/master/master/04.png)
 
-- `code`：错误码
-- `data`：当前计数值
+![image-05](https://gitee.com/liqianglog/pic/raw/master/master/05.png)
 
-##### 响应结果示例
+![image-06](https://gitee.com/liqianglog/pic/raw/master/master/06.png)
 
-```json
-{
-  "code": 0,
-  "data": 42
-}
-```
+![image-07](https://gitee.com/liqianglog/pic/raw/master/master/06.png)
 
-#### 调用示例
-
-```
-curl https://<云托管服务域名>/api/count
-```
+![image-08](https://gitee.com/liqianglog/pic/raw/master/master/08.png)
 
 
 
-### `POST /api/count`
-
-更新计数，自增或者清零
-
-#### 请求参数
-
-- `action`：`string` 类型，枚举值
-  - 等于 `"inc"` 时，表示计数加一
-  - 等于 `"clear"` 时，表示计数重置（清零）
-
-##### 请求参数示例
-
-```
-{
-  "action": "inc"
-}
-```
-
-#### 响应结果
-
-- `code`：错误码
-- `data`：当前计数值
-
-##### 响应结果示例
-
-```json
-{
-  "code": 0,
-  "data": 42
-}
-```
-
-#### 调用示例
-
-```
-curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://<云托管服务域名>/api/count
-```
-
-## 使用注意
-如果不是通过微信云托管控制台部署模板代码，而是自行复制/下载模板代码后，手动新建一个服务并部署，需要在「服务设置」中补全以下环境变量，才可正常使用，否则会引发无法连接数据库，进而导致部署失败。
-- MYSQL_ADDRESS
-- MYSQL_PASSWORD
-- MYSQL_USERNAME
-以上三个变量的值请按实际情况填写。如果使用云托管内MySQL，可以在控制台MySQL页面获取相关信息。
-
-
-## License
-
-[MIT](./LICENSE)
