@@ -16,7 +16,7 @@ CMD ["daphne","-b","0.0.0.0","-p","8000","application.asgi:application"]
 
 FROM nginx:alpine
 COPY ./docker_env/nginx/my.conf /etc/nginx/conf.d/my.conf
-COPY --from=0 /web/dist /usr/share/nginx/html
+
 
 FROM node:14-alpine
 COPY ./web/package.json /
